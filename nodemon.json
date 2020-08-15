@@ -1,0 +1,10 @@
+{
+	"watch": [
+		"./graphql/cloud-schema.ts",
+		"./graphql/local-schema.ts",
+		"./graphql/mock/**/*"
+	],
+	"ext": "ts",
+	"ignore": ["src/**/*.spec.ts"],
+	"exec": "TS_NODE_COMPILER_OPTIONS='{\"jsx\": \"preserve\"}' ts-node --skip-project ./graphql/mock/server.ts"
+}

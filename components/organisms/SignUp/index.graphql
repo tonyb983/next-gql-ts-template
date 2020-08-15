@@ -1,0 +1,11 @@
+mutation signUp($email: String!, $password: String!) {
+	signUp(
+		input: {
+			fields: { username: $email, email: $email, password: $password }
+		}
+	) {
+		viewer {
+			sessionToken
+		}
+	}
+}

@@ -1,0 +1,18 @@
+mutation updateUserPersonalInformations(
+	$id: ID!
+	$firstname: String
+	$lastname: String
+) {
+	updateUser(
+		input: {
+			id: $id
+			fields: { firstname: $firstname, lastname: $lastname }
+		}
+	) {
+		user {
+			id
+			firstname
+			lastname
+		}
+	}
+}
